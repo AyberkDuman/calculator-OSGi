@@ -1,5 +1,7 @@
 package converterServiceEN;
 
+// this class convert number to word for "english words"
+
 public class ConverterServiceEN {
 	
 	

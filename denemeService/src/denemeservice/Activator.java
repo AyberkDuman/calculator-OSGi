@@ -6,6 +6,8 @@ import org.osgi.framework.BundleContext;
 // import kullanilicak classlar
 import converterServiceEN.ConverterServiceEN;
 import converterServiceTR.ConverterServiceTR;
+import converterServiceNumEN.ConverterServiceNumEN;
+import converterServiceNumTR.ConverterServiceNumTR;
 
 public class Activator implements BundleActivator {
 
@@ -34,11 +36,14 @@ public class Activator implements BundleActivator {
 		ConverterServiceTR serviceTR = new ConverterServiceTR();
 		context.registerService(ConverterServiceTR.class, serviceTR, null);
 		
+		ConverterServiceNumEN serviceNumEn = new ConverterServiceNumEN();
+		context.registerService(ConverterServiceNumEN.class, serviceNumEn, null);
+		
+		ConverterServiceNumTR serviceNumTR = new ConverterServiceNumTR();
+		context.registerService(ConverterServiceNumTR.class, serviceNumTR, null);
+				
 	}
-	
-	
-	
-	
+
 	
 
 	public void stop(BundleContext bundleContext) throws Exception {

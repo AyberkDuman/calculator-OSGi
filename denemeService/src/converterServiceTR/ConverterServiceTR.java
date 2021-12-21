@@ -1,5 +1,7 @@
 package converterServiceTR;
 
+//this class convert number to word for "Turkish words"
+
 public class ConverterServiceTR {
 		
 	
