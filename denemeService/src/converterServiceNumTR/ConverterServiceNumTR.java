@@ -10,7 +10,7 @@ public class ConverterServiceNumTR {
 	
 	// kullanacagýmýz kelimeleri tanýmlarý.
 	
-		final static List<String> allowedStrings = Arrays.asList("and", "sýfýr", "bir", "iki", "üç", "dört", "beþ",
+		final static List<String> allowedStrings = Arrays.asList("ve", "sýfýr", "bir", "iki", "üç", "dört", "beþ",
 				"altý", "yedi", "sekiz", "dokuz", "on", "on bir", "on iki", "on üç", "on dört", "on beþ", "on altý",
 				"on yedi", "on sekiz", "on dokuz", "yirmi", "otuz", "kýrk", "elli", "altmýþ", "yetmiþ", "seksen",
 				"doksan", "yüz", "bin", "milyon", "milyar", "trilyon");
@@ -53,16 +53,16 @@ public class ConverterServiceNumTR {
 			String wordStripped = word.replaceAll("[^a-zA-Z\\sðüþýöçÐÜÞÝÖÇ]", "").toLowerCase();
 
 			// 2nd condition: skip "and" words by themselves and at start of num
-			if (allowedStrings.contains(wordStripped) && !(processingList.size() == 0 && wordStripped.equals("and"))) {
+			if (allowedStrings.contains(wordStripped) && !(processingList.size() == 0 && wordStripped.equals("ve"))) {
 				words.remove(i); // remove from main list, will process later
 				processingList.add(word);
 			} else if (processingList.size() > 0) {
 			// found end of group of textual words to process
 
-			//if "and" is the last word, add it back in to original list
+			//if "ve" is the last word, add it back in to original list
 			String lastProcessedWord = processingList.get(processingList.size() - 1);
-			if (lastProcessedWord.equals("and")) {
-				words.add(i, "and");
+			if (lastProcessedWord.equals("ve")) {
+				words.add(i, "ve");
 				processingList.remove(processingList.size() - 1);
 				}
 

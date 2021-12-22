@@ -142,7 +142,7 @@ public class ConverterServiceTR {
 	            
 	        } else if (number <= -1 && number >= -2147483648) { //minus -1,...-2147483648
 	            
-	            return "minus " + convertNumberToWords(Math.abs(number));
+	            return "eksi " + convertNumberToWords(Math.abs(number));
 	            
 	        } else {
 	            
