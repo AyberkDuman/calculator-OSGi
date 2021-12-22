@@ -3,12 +3,6 @@ package denemeservice;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
-// import kullanilicak classlar
-import converterServiceEN.ConverterServiceEN;
-import converterServiceTR.ConverterServiceTR;
-import converterServiceNumEN.ConverterServiceNumEN;
-import converterServiceNumTR.ConverterServiceNumTR;
-
 public class Activator implements BundleActivator {
 
 	private static BundleContext context;
@@ -22,28 +16,8 @@ public class Activator implements BundleActivator {
 		
 		System.out.println("denemeService baslatiliyor..");
 		
-		// ornek olarak aþaðýdaki registryDenemeService methodu cagýrýyorum
-		this.registryDenemeService();	
-		
-		
 		System.out.println("denemeService baslatildi");
 	}
-	
-	private void registryDenemeService(){
-		ConverterServiceEN serviceEN = new ConverterServiceEN();
-		context.registerService(ConverterServiceEN.class, serviceEN, null);
-		
-		ConverterServiceTR serviceTR = new ConverterServiceTR();
-		context.registerService(ConverterServiceTR.class, serviceTR, null);
-		
-		ConverterServiceNumEN serviceNumEn = new ConverterServiceNumEN();
-		context.registerService(ConverterServiceNumEN.class, serviceNumEn, null);
-		
-		ConverterServiceNumTR serviceNumTR = new ConverterServiceNumTR();
-		context.registerService(ConverterServiceNumTR.class, serviceNumTR, null);
-				
-	}
-
 	
 
 	public void stop(BundleContext bundleContext) throws Exception {
