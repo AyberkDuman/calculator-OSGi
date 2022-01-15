@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Deneme
-Bundle-SymbolicName: deneme
+Bundle-SymbolicName: ConverterConsumer
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: deneme.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-17
@@ -12,6 +12,6 @@ Require-Bundle: org.eclipse.osgi;bundle-version="3.17.100",
  org.apache.felix.gogo.command;bundle-version="1.1.2",
  org.apache.felix.gogo.runtime;bundle-version="1.1.4",
  org.apache.felix.gogo.shell;bundle-version="1.1.4",
- denemeService;bundle-version="1.0.0"
+ ConverterProvider;bundle-version="1.0.0"
 Bundle-ClassPath: .,
  jgoodies-forms-1.8.0.jar

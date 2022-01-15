@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: DenemeService
-Bundle-SymbolicName: denemeService
+Bundle-SymbolicName: ConverterProvider
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: denemeservice.Activator
 Bundle-RequiredExecutionEnvironment: JavaSE-17

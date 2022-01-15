@@ -67,7 +67,7 @@ public class UserInterface extends JFrame {
 					// setting default locale as Turkish
 					Locale trLocale= new Locale("TR");
 					Locale enLocale = new Locale("EN");
-					Locale.setDefault(trLocale);
+					Locale.setDefault(enLocale);
 					
 					// UI build
 					UserInterface frame = new UserInterface();
